@@ -3,6 +3,7 @@ import { WeatherData } from '@/types/weather';
 import { getWeatherIcon } from '@/lib/weatherUtils';
 import GlassPanel from '../ui/GlassPanel';
 import { MapPin } from 'lucide-react';
+import WeatherVibe from './WeatherVibe';
 
 interface WeatherHeroProps {
   weather: WeatherData;
@@ -17,6 +18,11 @@ export default function WeatherHero({ weather }: WeatherHeroProps) {
           {weather.city}, {weather.country}
         </h1>
         <p className="text-gray-300 mt-2 text-lg capitalize">{weather.condition}</p>
+        <WeatherVibe 
+          conditionCode={weather.conditionCode} 
+          temperature={weather.temperature} 
+          icon={weather.icon} 
+        />
       </div>
       <div className="flex items-center gap-6">
         <img 

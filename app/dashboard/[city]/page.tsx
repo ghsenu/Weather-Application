@@ -5,6 +5,7 @@ import { useWeather } from '@/hooks/useWeather';
 import WeatherHero from '@/components/weather/WeatherHero';
 import WeatherDetails from '@/components/weather/WeatherDetails';
 import WeatherBackground from '@/components/weather/WeatherBackground';
+import WeatherParticles from '@/components/weather/WeatherParticles';
 import LoadingSkeleton from '@/components/ui/LoadingSkeleton';
 import { motion } from 'framer-motion';
 import { Bookmark, BookmarkCheck, ChevronLeft, CalendarDays } from 'lucide-react';
@@ -60,6 +61,7 @@ export default function DashboardPage({ params }: { params: { city: string } }) 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       <WeatherBackground conditionCode={data.conditionCode} />
+      <WeatherParticles conditionCode={data.conditionCode} />
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
