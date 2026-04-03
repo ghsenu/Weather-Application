@@ -72,7 +72,7 @@ export default function WeatherVibe({ conditionCode, temperature, icon }: Weathe
       className="mt-4 max-w-md"
     >
       <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-blue-200 text-lg md:text-xl font-light italic leading-relaxed text-center md:text-left drop-shadow-sm">
-        "{getVibe()}"
+        &quot;{getVibe()}&quot;
       </p>
     </motion.div>
   );
