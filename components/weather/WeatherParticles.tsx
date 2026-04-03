@@ -51,7 +51,7 @@ export default function WeatherParticles({ conditionCode }: WeatherParticlesProp
       ctx.lineWidth = isRain ? 1.5 : 0;
       
       ctx.beginPath();
-      for (let p of particles) {
+      for (const p of particles) {
         if (isRain) {
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p.x + p.l * Math.sin(p.ang), p.y + p.l * Math.cos(p.ang));
@@ -65,7 +65,7 @@ export default function WeatherParticles({ conditionCode }: WeatherParticlesProp
       else ctx.fill();
 
       // Update physics
-      for (let p of particles) {
+      for (const p of particles) {
         if (isRain) {
           p.x += Math.sin(p.ang) * p.s;
           p.y += Math.cos(p.ang) * p.s;
